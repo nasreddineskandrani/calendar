@@ -1,0 +1,56 @@
+/* copyright Nasreddine Skandrani 2014 */
+body{
+  margin: 0px;
+}
+#calendar {
+  width: 100%;
+  text-align: center;
+}
+#container {
+  display: inline-block;
+}
+.cell
+{
+  float: none;
+  display: inline-block;
+  width: 66px;
+}
+.dayName {
+  height: 20px;
+}
+.dayName span {
+  height: 20px;
+  line-height: 20px;
+}
+.dayNumber {
+  height: 50px;
+}
+.dayNumber span { 
+  font-size: 22px;
+  line-height: 50px;
+}
+.white
+{
+  background-color: #ffffff;
+}
+.purple
+{
+  opacity: 0.9;
+  background-color: #d8cbdd;
+}
+.green
+{
+  background-color: #FFDAB9;
+}
+.yellow
+{
+  background-color: #EEE8AA;
+}
+.grey
+{
+  background-color: #E8E8E8;
+}
+.currentDay
+{
+  background-color: #EE9572;
+}

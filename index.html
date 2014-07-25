@@ -1,0 +1,53 @@
+<!-- copyright Nasreddine Skandrani 2014 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel='stylesheet' type='text/css' href="3rd/calendar/calendar.css">
+  </head>
+  <body>
+    <div id="calendar"></div>
+
+    <div id="example">
+      <button id="btn-last">last month</button>
+      <button id="btn-next">next month</button>
+      <span id="currentMonth"></span>
+    </div>
+
+    <script type="text/javascript" src="3rd/momentJs/2.6.0/moment-with-langs.js"> </script>
+    <script type="text/javascript" src="3rd/calendar/calendar.js"></script>
+
+    <style>
+      #example {
+        text-align: center;
+      }
+    </style>
+    <script>
+
+      //notice: different resolution managing
+      //you can use media query with css3 to manage different screen resolutions
+      //and changing the sizeof .cell elements with a little css
+      //or
+      //include twitter bootstrap in your project and add some bootstrap css class with javascript
+      //to have a responsive design
+
+      //exemple of use
+      var elements = document.getElementsByClassName("dayNumber");
+      for (var i = 0; i < elements.length; ++i) {
+        elements[i].addEventListener('click', function() {
+          var dateOfCurrentElement = calendar.getDateFromCellElement(this);
+          alert("Current date clicked is : " + dateOfCurrentElement.day + "/" + dateOfCurrentElement.month + "/" + dateOfCurrentElement.year);
+        }, false);
+      }
+      document.getElementById("btn-last").addEventListener('click', function() {
+        calendar.previousMonth();
+        document.getElementById("currentMonth").innerHTML = "current month is : " + parseInt(calendar.currentSelectedMonth.format('MM'),10);
+      }, false);
+      document.getElementById("btn-next").addEventListener('click', function() {
+        calendar.nextMonth();
+        document.getElementById("currentMonth").innerHTML = "current month is : " + parseInt(calendar.currentSelectedMonth.format('MM'),10);
+      }, false);
+      document.getElementById("currentMonth").innerHTML = "current month is : " + parseInt(calendar.currentSelectedMonth.format('MM'),10);
+    </script>
+  </body>
+</html>
