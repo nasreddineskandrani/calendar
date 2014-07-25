@@ -105,7 +105,6 @@ calendar.init = function() {
 
   //Fill calender with correct current month days strings
   var firstDayOfCurrentMonth = moment().startOf('month');
-  console.log(firstDayOfCurrentMonth);
   calendar.currentSelectedMonth = moment().startOf('month');
   calendar.fillCalendarWithMonth(firstDayOfCurrentMonth, calendar.currentDate, calendar.currentSelectedMonth);
 }
@@ -113,7 +112,6 @@ calendar.init = function() {
 calendar.fillCalendarWithMonth = function(_firstDayOfMonth, _currentDate, _currentSelectedMonth)
 {
   var firstDayOfMonthIndex = _firstDayOfMonth.day();
-  console.log(firstDayOfMonthIndex);
   var offset = (firstDayOfMonthIndex == 0) ? 7 : firstDayOfMonthIndex;
   var tempFirstDayOfMonth = moment(_firstDayOfMonth);
   var currentDateCustomCalendar = tempFirstDayOfMonth.subtract("days",offset);
