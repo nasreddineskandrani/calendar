@@ -29,28 +29,19 @@ body{
   font-size: 22px;
   line-height: 50px;
 }
-.white
-{
-  background-color: #ffffff;
-}
-.purple
-{
-  opacity: 0.9;
-  background-color: #d8cbdd;
-}
-.green
-{
+.heading-color-1 {
   background-color: #FFDAB9;
 }
-.yellow
-{
+.heading-color-2 {
   background-color: #EEE8AA;
 }
-.grey
-{
+.days-color-1 {
+  opacity: 0.9;
   background-color: #E8E8E8;
 }
-.currentDay
-{
+.days-color-2 {
+  background-color: #d8cbdd;
+}
+.currentDay {
   background-color: #EE9572;
 }

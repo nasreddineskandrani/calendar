@@ -77,26 +77,26 @@ calendar.init = function() {
 
   calendar.elements = document.querySelectorAll("#row" + 0 + " .cell");
   for (var j = 0; j < calendar.elements.length; j = j + 2) {
-    addClass(calendar.elements[j], "green");
+    addClass(calendar.elements[j], "heading-color-1");
   }
   for (var j = 1; j < calendar.elements.length; j = j + 2) {
-    addClass(calendar.elements[j], "yellow");
+    addClass(calendar.elements[j], "heading-color-2");
   }
 
   for (var i = 1; i < 7; i = i + 2) { 
     calendar.elements = document.querySelectorAll("#row" + i + " .cell");
     for (var j = 0; j < calendar.elements.length; j = j + 2) {
-      addClass(calendar.elements[j], "purple");
+      addClass(calendar.elements[j], "days-color-1");
     }
     for (var j = 1; j < calendar.elements.length; j = j + 2) {
-      addClass(calendar.elements[j], "grey");
+      addClass(calendar.elements[j], "days-color-2");
     }
     calendar.elements = document.querySelectorAll("#row" + (i+1) + " .cell");
     for (var j = 0; j < calendar.elements.length; j = j + 2) {
-      addClass(calendar.elements[j], "grey");
+      addClass(calendar.elements[j], "days-color-2");
     }
     for (var j = 1; j < calendar.elements.length; j = j + 2) {
-      addClass(calendar.elements[j], "purple");
+      addClass(calendar.elements[j], "days-color-1");
     }
   }
 
